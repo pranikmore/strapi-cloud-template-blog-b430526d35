@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rise_app_stories",
+  "info": {
+    "singularName": "rise-app-storie",
+    "pluralName": "rise-app-stories",
+    "displayName": "RiseApp_Storie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "StoryId": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "ImageUrl": {
+      "type": "string"
+    },
+    "Sequence": {
+      "type": "integer"
+    },
+    "IsActive": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Products": {
+      "type": "string"
+    },
+    "StartDate": {
+      "type": "date"
+    },
+    "EndDate": {
+      "type": "date"
+    },
+    "CreatedBy": {
+      "type": "string",
+      "required": true
+    },
+    "LastUpdatedBy": {
+      "type": "string",
+      "required": true
+    },
+    "story_ids": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rise-app-stories-detail.rise-app-stories-detail",
+      "mappedBy": "rise_app_storie"
+    }
+  }
+}
