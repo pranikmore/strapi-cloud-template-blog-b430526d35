@@ -375,8 +375,8 @@ export interface ApiRiseAppStorieRiseAppStorie extends Schema.CollectionType {
   };
   attributes: {
     StoryId: Attribute.BigInteger & Attribute.Required & Attribute.Unique;
-    Name: Attribute.String & Attribute.Required;
-    Description: Attribute.Text;
+    Title: Attribute.String & Attribute.Required;
+    LongDescription: Attribute.Text;
     ImageUrl: Attribute.String;
     Sequence: Attribute.Integer;
     IsActive: Attribute.Boolean &
@@ -392,6 +392,8 @@ export interface ApiRiseAppStorieRiseAppStorie extends Schema.CollectionType {
       'oneToMany',
       'api::rise-app-stories-detail.rise-app-stories-detail'
     >;
+    EventName: Attribute.String;
+    RedirectionType: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

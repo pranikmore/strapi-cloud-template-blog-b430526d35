@@ -17,11 +17,11 @@
       "required": true,
       "unique": true
     },
-    "Name": {
+    "Title": {
       "type": "string",
       "required": true
     },
-    "Description": {
+    "LongDescription": {
       "type": "text"
     },
     "ImageUrl": {
@@ -57,6 +57,12 @@
       "relation": "oneToMany",
       "target": "api::rise-app-stories-detail.rise-app-stories-detail",
       "mappedBy": "rise_app_storie"
+    },
+    "EventName": {
+      "type": "string"
+    },
+    "RedirectionType": {
+      "type": "string"
     }
   }
 }
