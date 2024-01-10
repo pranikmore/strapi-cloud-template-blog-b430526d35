@@ -375,8 +375,8 @@ export interface ApiRiseAppStorieRiseAppStorie extends Schema.CollectionType {
   };
   attributes: {
     StoryId: Attribute.BigInteger & Attribute.Required & Attribute.Unique;
-    Title: Attribute.String & Attribute.Required;
-    LongDescription: Attribute.Text;
+    Name: Attribute.String & Attribute.Required;
+    Description: Attribute.Text;
     ImageUrl: Attribute.String;
     Sequence: Attribute.Integer;
     IsActive: Attribute.Boolean &
@@ -392,8 +392,6 @@ export interface ApiRiseAppStorieRiseAppStorie extends Schema.CollectionType {
       'oneToMany',
       'api::rise-app-stories-detail.rise-app-stories-detail'
     >;
-    ShortDescription: Attribute.String;
-    RedirectionType: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -427,8 +425,8 @@ export interface ApiRiseAppStoriesDetailRiseAppStoriesDetail
   attributes: {
     StoryDetailId: Attribute.BigInteger & Attribute.Required & Attribute.Unique;
     StoryId: Attribute.BigInteger & Attribute.Required;
-    Name: Attribute.String & Attribute.Required;
-    Description: Attribute.Text;
+    Title: Attribute.String & Attribute.Required;
+    LongDescription: Attribute.Text;
     ImageUrl: Attribute.String;
     RedirectionLink: Attribute.String;
     Sequence: Attribute.Integer & Attribute.Required;
@@ -445,6 +443,8 @@ export interface ApiRiseAppStoriesDetailRiseAppStoriesDetail
       'manyToOne',
       'api::rise-app-storie.rise-app-storie'
     >;
+    ShortDescription: Attribute.String;
+    RedirectionType: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

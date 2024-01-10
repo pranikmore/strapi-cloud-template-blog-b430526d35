@@ -21,11 +21,11 @@
       "type": "biginteger",
       "required": true
     },
-    "Name": {
+    "Title": {
       "type": "string",
       "required": true
     },
-    "Description": {
+    "LongDescription": {
       "type": "text"
     },
     "ImageUrl": {
@@ -65,6 +65,12 @@
       "relation": "manyToOne",
       "target": "api::rise-app-storie.rise-app-storie",
       "inversedBy": "story_ids"
+    },
+    "ShortDescription": {
+      "type": "string"
+    },
+    "RedirectionType": {
+      "type": "string"
     }
   }
 }
