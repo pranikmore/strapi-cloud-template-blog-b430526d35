@@ -58,7 +58,7 @@
       "target": "api::rise-app-stories-detail.rise-app-stories-detail",
       "mappedBy": "rise_app_storie"
     },
-    "EventName": {
+    "ShortDescription": {
       "type": "string"
     },
     "RedirectionType": {

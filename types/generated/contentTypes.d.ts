@@ -392,7 +392,7 @@ export interface ApiRiseAppStorieRiseAppStorie extends Schema.CollectionType {
       'oneToMany',
       'api::rise-app-stories-detail.rise-app-stories-detail'
     >;
-    EventName: Attribute.String;
+    ShortDescription: Attribute.String;
     RedirectionType: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
