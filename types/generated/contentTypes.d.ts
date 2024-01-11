@@ -375,7 +375,7 @@ export interface ApiRiseAppStorieRiseAppStorie extends Schema.CollectionType {
   };
   attributes: {
     StoryId: Attribute.BigInteger & Attribute.Required & Attribute.Unique;
-    Name: Attribute.String & Attribute.Required;
+    Title: Attribute.String & Attribute.Required;
     Description: Attribute.Text;
     ImageUrl: Attribute.String;
     Sequence: Attribute.Integer;

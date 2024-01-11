@@ -17,7 +17,7 @@
       "required": true,
       "unique": true
     },
-    "Name": {
+    "Title": {
       "type": "string",
       "required": true
     },
